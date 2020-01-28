@@ -1,0 +1,109 @@
+\section{Proposed Methodology}\label{sec:methods}
+In order to achieve our objectives we hope to adopt the following methodologies.
+
+\subsection[Objective 1]{Objective 1}
+\textit{``Identifying the NLP related problems in business processes that are not well addressed by academic research''}
+
+\vspace{12pt}
+\noindent Academic research can overly simplify a real-world problem in order to gain good performance. For example, the data used may have training samples which are different to those in real world business process. In real scenarios, getting enough labelled data is usually a problem as the data generation is also a part of the process. We might get very less data during the start of the process or even if the data is available that will be unlabelled. The quality of the data may be poor, and we need to apply pre-processing before we can use that data for any experiment. We will identify these kind of problems which arise during the implementation of machine learning methods in real-world application. 
+
+We plan to investigate two approaches for identifying these problems faced by business processes. First, by investigation of literature where we will do extensive review of current state-of-the-art methods from academic research and try to find out where they can fail while implementing them in real-world scenario. Second, by talking to the representatives of different industries to establish at first hand where the key challenges lie in adopting the state-of-the-art methods from academic research in their tasks.
+
+\paragraph{Deliverable:} At the end of this phase, we will disseminate our findings in form of review paper or report through journal publications.
+
+\subsection{Objective 2}
+\textit{``Identifying the common use-cases from business processes and gathering data for those use-cases''}
+
+\vspace{12pt}
+\noindent There are various use-cases in business process like text classification, natural language generation or question answering. We will identify some use-cases that are very common in business processes in terms of text mining throughout the industry. This will again be achieved by either contemplation or by talking to people from industry.
+
+While selecting the use-case, focus will also be on the availability of public datasets that can be used to easily simulate the real-world scenario. We will try to ask some companies if they are willing to share their data in exchange to better methods for their business process.
+
+\paragraph{Deliverable:} At the end of this phase, any dataset gathered will be made available to the community through open repositories like UCI ML Repo \footnote{\url{https://archive.ics.uci.edu/ml/index.php}}.
+
+\subsection{Objective 3}
+\textit{``Setting up the benchmark performance by implementing state-of-the-art algorithms for the real-world scenario''}
+
+\vspace{12pt}
+
+\noindent We will use public datasets to simulate the real-world scenario and apply the current state-of-the-art. For example, adding timestamps to a pre-processed public datasets can help in simulating a real-world scenario. Then with time-stamps we can simulate the cold-start scenario where initially we will have very less data to start our process and then the labelled data will be generated as a part of the process. 
+
+We will use this real-world scenario to test the various state-of-the-art methods from literature review on the use-cases selected from objective 2. 
+
+\paragraph{Deliverable:} At the end of this phase, we will publish our findings in form of through various workshops and conferences focused on solving NLP related problems in business processes.
+
+\subsection{Objective 4}
+\textit{``Developing novel methods to outperform the current state-of-the-art algorithms and evaluating them with real world data on different use-cases''}
+
+\vspace{12pt}
+
+One of the possible problems can be the unavailability of labelled data for training the learning models. To gain better performance with less training data, we can either develop techniques suitable for working with less training data; or develop techniques for generating the new training data.
+
+\subsubsection{Reducing the Data Requirement}
+We can take an approach to develop novel techniques that can give good performance on less data. Chunking the time period based on the availability of labelled data can be one way, where we will use different set of algorithms for based on the amount of labelled data available for training.
+
+In the initial phase, where we have very less amount of labelled data for training we can use rule-based traditional NLP techniques. After some time, when we develop more labelled data we can use feature engineering based machine learning techniques for better performance. After a long time, when we have a huge corpus of labelled data for training then we can deep learning techniques suitable for that amount of training data. A similar kind of initial work is explained in \cref{sec:wetc}.
+
+\subsubsection{Generating New Training Data}
+Another way can be augmenting data to increase the amount of training data. Data augmentation in NLP is still not very popular as compared to that in Computer Vision \cite{guo2018long}. The few techniques used in NLP for augmenting text data from literature that can be adopted and extended are;
+
+\paragraph{Back Translation} 
+In this method, a sentence is translated from one language to other and then again back translated to the first language. In this process of back translation, some of the words are changed from the original sentence while maintaining the semantics as it is. Similar kind of work is done here \cite{Xie2019} for consistency training.
+
+\paragraph{Contextual Word Replacement}
+Another good technique for augmentation is randomly replacing some of the words with their synonyms/antonyms with changing the context of the whole sentence. This technique was introduced in the work \cite{kobayashi2018contextual} which achieved comparatively better results on various datasets.
+
+\paragraph{GANs}
+Generative Adversarial Networks are very successful in computer vision for new data generation \cite{ali2019mfc}. But they are not much investigated in text for the same purpose  \cite{guo2018long}. There are few examples like MaskGAN and LeakGAN \cite{fedus2018maskgan,guo2018long} which can be tested and improved for our purpose.
+
+\vspace{6pt}
+\paragraph{Deliverable:} At the end of this phase, we will disseminate our findings through different conferences and journals in form of technical papers and will also make our code open-source through GitHub \footnote{\url{https://github.com/}} or some other open-source code sharing platforms.
+
+% might not be available for training the learning algorithms.
+
+% \subsection{Objective 1}
+% Transfer learning has gained a lot of success in the Computer Vision based deep learning tasks. The weights trained on a huge corpus like Imagenet are shared for smaller tasks that increase the performance after fine-tuning. The models trained on huge corpus are able to identify the general features of an image and after fine-tuning the models they pass their learning to smaller domain specific tasks. 
+
+% In the last couple of years, transfer learning has also gained popularity in NLP research. The idea here is to train a Language Model on a huge general corpus like Wikipedia text or news corpus which will help model in learning the basics of grammar and understanding its rule. Then fine-tune the language model on a domain specific corpus according to the need. The models discussed in literature like ULMFiT and BERT are based on this idea only. 
+
+% These works have shown very good performance on the pre-processed public datasets. But there is not much evidence of their performance on the real world data, where either data is available in very less amount or is available in streams. As shown in \cref{sec:initial_work}, deep learning has potential to enhance NLP performance in business process provided the problem of data availability is tackled.
+
+% By comparing traditional NLP techniques with these machine/deep learning techniques on various scenarios, we will identify the gaps between industry and academia. By modifying public datasets with time-stamp marks we can simulate a business process environment with cold start and concept drift scenario. We will propose new algorithms based on transfer learning in NLP to bridge the gap between industrial solutions and academic research. 
+% % In the initial phase, the NLP solutions based on feature engineering will be applied on the some custom or public datastes and then these methods will be compared with our new proposed deep learning  based methods. 
+
+% \subsection{Objective 2}
+% Training deep learning models requires a huge amount of labelled data and in a business process we often face the problem of cold start where its not always easy to get the ample amount of labelled data in the initial phase. To tackle this problem, we can take two approach; first, develop techniques suitable for giving good performance on less training data; or second, develop techniques for increasing training data.
+
+% \subsubsection{Reducing the Data Requirement}
+% We can take an approach to develop novel techniques that can give good performance on less data. Chunking the time period based on the availability of labelled data can be one way, where we will use different set of algorithms for based on the amount of labelled data available for training.
+
+% In the initial phase, where we have very less amount of labelled data for training we can use rule-based traditional NLP techniques. After some time, when we develop more labelled data we can use feature engineering based machine learning techniques for better performance. After a long time, when we have a huge corpus of labelled data for training then we can deep learning techniques suitable for that amount of training data. A similar kind of initial work is explained in \cref{sec:wetc}.
+
+
+% \subsubsection{Augmenting Training Data}
+% Another way can be making use of data augmentation to increase the amount of training data. Data augmentation in NLP is still not very popular as compared to that in Computer Vision. The few techniques used in NLP for augmenting text data from literature that can be adopted and extended are;
+
+% \paragraph{Back Translation} 
+% In this method, a sentence is translated from one language to other and then again back translated to the first language. In this process of back translation, some of the words are changed from the original sentence while maintaining the semantics as it is. Similar kind of work is done here \cite{Xie2019} for consistency training.
+
+% \paragraph{Contextual Word Replacement}
+% Another good technique for augmentation is randomly replacing some of the words with their synonyms/antonyms with changing the context of the whole sentence. This technique was introduced in the work \cite{kobayashi2018contextual} which achieved comparatively better results on various datasets.
+
+% \paragraph{GANs}
+% Generative Adversarial Networks are quite popular in CV for new data generation. But they are not much investigated in text for the same purpose. There are few examples LeakGAN like which can be tested and improved for our purpose \cite{guo2018long}.
+
+% % \subsection{Objective 3}
+% % After sometimes, when new labelled data is available, why not to use it and identify any drift of concept rather than using a system trained on synthetic data.
+% % % Handling Concept Drift
+
+% \subsection{Evaluation}\label{sec:eval}
+% We will evaluate our proposed methods with various real life use-cases
+
+% \subsection{Dissemination}
+% Any type of dataset created by us will be made publicly available through UCI Machine Learning repository \footnote{\url{https://archive.ics.uci.edu/ml/index.php}}. At each stage of the research we will make our finding public through conferences and journal publications. The code will be made publicly available through GitHub \footnote{\url{https://github.com/}}.
+
+
+
+% Develop machine and deep learning algorithms to support the NLP rules. However, learning algorithms need large amounts of data for training to produce good results. But getting good labelled data is expensive. There is a trade-off between performance and data availability. Prof. Andrew Ng of Stanford University identifies that “we need to focus on developing better algorithms that can work on smaller datasets and stop relying on a large amount of data to train the models”. In our case also, we need to develop representation and methods that can work on small amount of data provided for training. For this, methods like One-Shot Learning or Siamese Networks can be explored to train the models on smaller datasets [5]. Furthermore, evolutionary algorithms can be used to develop an approach of selecting best possible representation and method from a set of different representations and methods for training the machine learning/deep learning models [6].
+
+% In the final step, we need to use the boosting mechanisms that employ feedback to learn from our system errors in order to improve the performance. In traditional machine learning there are well-established boosting techniques available that can be used to fulfil the purpose, whereas in deep learning tree methods like gcForest can be explored a potential approaches to developing effective boosting mechanism.

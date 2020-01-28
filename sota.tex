@@ -1,0 +1,50 @@
+\subsection{Current State-of-the-Art}\label{sec:sotas}
+In the literature, current State-of-the-Arts (SOTA) for almost all of the NLP tasks are based on deep learning learning algorithms. In the \cref{tab:sotas} we will list few works and their performance on the tasks defined in \cref{sec:tasks}.
+
+\begin{sidewaystable}[!htbp]
+  \begin{center}
+    \caption{Current State-of-the-Arts. We can see that almost all of the works are based on deep learning.}
+    \label{tab:sotas}
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      \textbf{Task} & \textbf{Work} & \textbf{Model} & \textbf{Performance} & \textbf{Data}\\
+      \hline
+      \textbf{NER} & \cite{baevski2019cloze} & CNN Large + fine-tune & 93.5 F1 & CoNLL 2003\\
+      & \cite{strakova-etal-2019-neural} & LSTM-CRF+ELMo+BERT+Flair & 93.38 F1 & CoNLL 2003\\
+      \hline
+      \textbf{POS Tagging} & \cite{Bohnet_2018} & Meta BiLSTM & 97.96 Acc & Penn Treebank\\
+      & \cite{Heinzerling_2019} & Multilingual BERT and BPEmb & 96.77 Acc &  Universal Dependencies\\
+      \hline
+      \textbf{NLI} & \cite{liu2019roberta} & RoBERTa & 90.8 Acc & Multi-NLI\\
+      & \cite{yang2019xlnet} & XLNet-Large & 90.2 Acc & Multi-NLI\\
+      \hline
+      \textbf{Relation Extraction} & \cite{lai-etal-2018-sunnynlp} & SVM with GloVe & 0.76 F1 & SemEval 2018 Task 10\\
+      & \cite{baldini-soares-etal-2019-matching} & BERT: Matching-the-Blanks & 89.5 F1 & SemEval 2010 Task 8\\
+    %   \hline
+    %   SRL & \cite{he-etal-2018-jointly} & ELMo Modified & 85.5 & OntoNotes\\
+    %   & \cite{peters2018deep} & ELMo & 84.6 & OntoNotes\\
+    %   \hline
+    %   Dependency Parsing & 25.113231 & d &   & Penn Treebank\\
+    %   & 1110.1 & a &   & Universal Dependencies\\
+      \hline
+      \textbf{Machine Translation} & \cite{edunov2018understanding} & Transformer Big & 35 BLEU  & WMT 2014 EN-DE\\
+      & \cite{edunov2018understanding} & Transformer Big & 45.6 & WMT 2014 EN-FR\\
+    %   \hline
+    %   Data Augmentation & 25.113231 & d &   & imdb\\
+    %   & 1110.1 & a &   & Amazon Reviews\\
+    %   \hline
+    %   Summary Generation & 25.113231 & d &   & CNN/Daily Mail\\
+    %   & 1110.1 & a &   & CNN/Daily Mail\\
+      \hline
+      \textbf{Question Answering} & \cite{lan2019albert} & ALBERT (ensemble model) & 92.21 F1 & SQuAD\\
+      & \cite{lan2019albert} & ALBERT (single model) & 90.9 F1 & SQuAD\\
+      \hline
+      \textbf{Text Classification} & \cite{yang2019xlnet} & XLNet & 0.62 Error & Dbpedia\\ 
+      & \cite{yang2019xlnet} & XLNet & 4.49 Error & AG News\\
+    %   \hline
+    %   Aspect-Based Sentiment & 25.113231 & d &   & SemEval-2014 Task 4\\
+    %   & 1110.1 & a &   & SemEval-2014 Task 4\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{sidewaystable}

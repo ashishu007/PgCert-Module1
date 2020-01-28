@@ -1,0 +1,20 @@
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+      \section*{\abstractname}%
+    \else %% <- here I've removed \small
+      \begin{center}%
+        {\bfseries \Large\abstractname\vspace{\z@}}%  %% <- here I've added \Large
+      \end{center}%
+      \quotation
+    \fi}
+    {\if@twocolumn\else\endquotation\fi}
+\makeatother
+
+\begin{abstract}
+
+With the evolution of web and cloud computing the amount of data generated is higher than ever. Most of the data is in unstructured textual format. The generated data can help many industries automate their everyday business processes by analysing and processing them. There is a strong need for the development of effective approaches that can process the natural language automatically. Initial solutions to these problems were applying custom rule-based approaches that can be very specific to the problem domains. They require a lot of domain expertise for crafting the features and the performance with these methods was also poor. New approaches employed with machine and deep learning methods for solving the natural language related tasks has given a huge performance gain in the literature due to their ability to learn from the previous data. But the methods proposed in academic research often fail when implemented in real-world applications due to the difference in nature of problem in business processes. One of the drawbacks can be the requirement of a lot of labelled data for training the learning models as in the business processes the labelled data is generated as the part of the process.
+
+In this research we will identify these kind of problems faced by business process during the implementation of current state-of-the-art methods and help them improve their natural language processing performance employed with machine/deep learning. We expect our research contributions to be in the area of business process automation with focus on machine and deep learning. Importantly this work will develop novel algorithms and possibly some dataset which will be made available in public doamin with the aim of helping industries with less resources to enhance their everyday business process.
+
+\end{abstract} 

@@ -1,0 +1,95 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+% \renewcommand{\familydefault}{\sfdefault}
+% \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{natbib,har2nat}
+\usepackage{xcolor,colortbl}
+\usepackage{mathtools}
+\usepackage{forloop}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+% \usepackage{multirow}
+% \usepackage{outlines}
+\usepackage{subcaption}
+% \usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{cleveref}
+\usepackage{pgfgantt}
+\usepackage{rotating}
+\usepackage[toc,page]{appendix}
+\usepackage{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% \geometry{
+%  a4paper,
+%  total={170mm,257mm},
+%  left=20mm,
+%  top=20mm,
+% }
+
+
+\begin{document}
+
+\includepdf{misc/cover_signed.pdf}
+
+\title{Machine/Deep Learning based Performance Enhancement of Natural Language Processing in Business Processes}
+\author{
+Ashish Upadhyay (a.upadhyay@rgu.ac.uk) \\ 
+\textbf{Principle Supervisor}: Dr. Stewart Massie (s.massie@rgu.ac.uk)}
+\date{}
+\maketitle 
+
+\input{abstract}
+\clearpage
+
+\tableofcontents
+\clearpage
+
+% \listoffigures
+% \clearpage
+
+% \listoftables 
+% \clearpage
+
+\input{introduction}
+% \clearpage
+
+\input{research_questions}
+% \clearpage
+
+\input{literature}
+% \clearpage
+
+\input{methodology}
+% \clearpage
+
+\input{initial_work.tex}
+% \clearpage
+
+\input{impact.tex}
+% \clearpage
+
+\input{time_plan.tex}
+\clearpage
+
+
+\bibliographystyle{agsm}
+\bibliography{ref}
+\clearpage
+
+\begin{appendices}
+
+% \section{Sensor Fusion with SelfBACK}
+% \label{appendix:selfback}
+% \input{misc/selfback_results}
+
+\section{Vitae Personal Development Planner}
+\label{appendix:vitae}
+\includepdf[pages={1-3}]{misc/action_plan.pdf}
+
+\end{appendices}
+
+\end{document}

@@ -1,0 +1,43 @@
+\section{Literature Review}\label{sec:lit_rev}
+Natural Language Processing (NLP) has come a long way from the era of batch processing and punch cards where a sentence analysis query used to take almost seven minutes to the era of search engines like Google and Bing where millions of web pages are crawled within seconds to produce the best results \cite{Cambria2014}. NLP is a way for computers to perform natural language related tasks like information extraction (like POS tagging, Named Entity Extraction) or language generation and summarisation (like machine translation, dialogue systems) \cite{Young2018}.
+
+% There are different types of tasks in NLP guiding the research in this domain ranging from lower level problems like NER and POS tagging to higher level problems like machine translation and question answering. 
+In the next \cref{sec:tasks}, we briefly discuss the various tasks of NLP on different levels. To solve these tasks, there are various methods in the literature which we broadly divide into two categories; Knowledge Engineering (\cref{sec:ke}) and Representation Learning (or in common words, deep learning \cref{sec:dl}). Earlier, knowledge engineering approaches were use to solve NLP tasks. But problem with these methods is that they rely on domain expertise for engineering the knowledge from data. With the development and success of deep learning methods in vision tasks, deep learning has been employed for NLP tasks as well and has been successful as well. The benefit of these methods is that they do not need any special knowledge engineering as they automatically learn features modelling the data during their training phase. This learning is iteratively updated in various steps during training.
+% The main difference between two is that the former requires a lot of feature engineering whereas the later automates the process of feature extraction using dense representation of text. 
+% In the final \cref{sec:initial_work}, we will take a real world example using the compliance data from Oil and Gas industry and evaluate these methods.
+
+% The techniques present in literature for solving these tasks. We will briefly discuss about how the fields of industry and academia differ in taking to approaches to the solution for these tasks.
+
+% Solving these NLP tasks were a real hassle for a long time. They required an extensive need of domain expertise in order to derive some knowledge that will suit for a given problem. But with the advancement of deep learning in the field of NLP we have got new solutions that are not specific to the domain of the problem. Same method can be applied to different problems from different domains with very little fine tuning with respect to domain specific data.
+
+% The breakthroughs in academic research take a long time to be implemented in the industry. This is due to problem of available labelled data-set for training the 
+
+% Here we can broadly divide the problem solving approaches into two categories: knowledge engineering and deep learning. 
+
+
+\input{tasks.tex}
+
+\input{ke.tex}
+
+\input{dl.tex}
+
+% \input{sota.tex}
+
+% \subsection{Business Process}\label{business_process}
+% % \label{sec:use_in_business}
+% \paragraph{Cold Start \& Concept Drift} We have seen from the \cref{tab:sotas} that deep learning has given better results with ample amount of data available for training. But the problem in a business process is with the availability of data itself. Deep learning can provide better performance but will require a huge amount of resource to train the models. 
+
+% In a business process it is hard to get ample amount of data in the initial phase and hence we face the problem of cold start. We need to train our models with less data only, which results in reduced performance. Also, in a business process we keep receiving data as time goes on like stream of data. After some times, we may get new data that might be enough to train a deep learning model. And there is high chance that the relationship between problem and solution changes as well. Hence it is important to address the problem of concept drift as well.
+
+% Less Data
+
+% Class Imbalance
+
+% But deep learning has its own consequences, and that is the resource needed for the training of a deep learning model. It takes a lot of labelled data for training a deep learning model, as well as the training itself takes a long time and very powerful system to run the process on. Even if we can out-source the training process to cloud services like AWS or Azure, we may reduce our expenses on time and machine but still we will need a lot of training data that should be labelled.
+
+% These can be solved with methods like One shot learning or data augmentation to increase the training set. GANs
+
+% With a general semi-supervised training on big corpus, the learning can be transferred to some domain specific task with minimal fine tuning for particular task.
+
+% \subsection{Concept Drift}
+% In industry, collecting a training data brings a new form of challenge: the challenge of concept drift. The problem is that during the start of a business process 

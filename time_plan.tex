@@ -1,0 +1,58 @@
+\section{Time Management Plan}\label{sec:time_plan}
+% ``In Progress''
+
+\newcounter{loopcntr}
+\newcommand{\onblue}[1][1]{
+  \forloop{loopcntr}{0}{\value{loopcntr}<#1}{&\cellcolor{blue}}
+}
+\newcommand{\onbluee}[1][1]{
+  \forloop{loopcntr}{0}{\value{loopcntr}<#1}{&\cellcolor{bluee}}
+}
+\newcommand{\off}[1][1]{
+  \forloop{loopcntr}{0}{\value{loopcntr}<#1}{&}
+}
+\definecolor{blue}{HTML}{002b80}
+\definecolor{bluee}{HTML}{ccddff}
+
+\noindent\begin{tabular}
+{|p{0.54\textwidth}
+!{\vrule width 0.4mm}p{0.01\textwidth}*{3}{|p{0.01\textwidth}}
+!{\vrule width 0.4mm}p{0.01\textwidth}*{3}{|p{0.01\textwidth}}
+!{\vrule width 0.4mm}p{0.01\textwidth}*{3}{|p{0.01\textwidth}}
+|}
+
+\hline
+\textbf{Time Management Plan} 
+& \multicolumn{4}{c!{\vrule width 0.4mm}}{Year 1} 
+& \multicolumn{4}{c!{\vrule width 0.4mm}}{Year 2} 
+& \multicolumn{4}{c!{\vrule width 0.4mm}}{Year 3} \\
+
+\hline
+\textbf{Objective 1} & \multicolumn{12}{c|}{} \\
+\hline
+Review literature to identify the research gaps \onblue[3] \onbluee[7] \off[2] \\
+% \hline
+% Contemplation for identifying the research gaps \off[1] \onblue[2] \onbluee[3] \off[6] \\
+\hline
+Talking to industry representatives for identifying gaps \off[2] \onblue[2] \onbluee[3] \off[5] \\
+\hline
+\textbf{Objective 2} & \multicolumn{12}{c|}{} \\
+\hline
+Identifying use-case and gathering data  \off[3] \onblue[2] \onbluee[3] \off[4] \\
+\hline
+\textbf{Objective 3} & \multicolumn{12}{c|}{} \\
+\hline
+Implementing state-of-the-arts methods on gathered data \off[4] \onblue[4] \onbluee[2] \off[2] \\
+\hline
+\textbf{Objective 4} & \multicolumn{12}{c|}{} \\
+\hline
+Proposing new algorithms to outperform the benchmark performance \off[6] \onblue[4] \onbluee[2] \\
+\hline
+Evaluating proposed methods on real-world data \off[7] \onblue[4] \onbluee[1] \\
+\hline
+\textbf{Final} & \multicolumn{12}{c|}{} \\
+\hline
+Finalizing Thesis Submission \off[10] \onblue[2] \\
+\hline
+
+\end{tabular}
